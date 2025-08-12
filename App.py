@@ -7,11 +7,16 @@ import requests, io
 import PIL.Image
 from urllib.request import urlopen
 
-with open('./Data/movie_data.json', 'r+', encoding='utf-8') as f:
+import os
+base_path = os.path.dirname(__file__)
+data_path = os.path.join(base_path, 'Data', 'movie_data.json')
+titles_path = os.path.join(base_path, 'Data', 'movie_titles.json')
+
+with open(data_path, 'r', encoding='utf-8') as f:
     data = json.load(f)
-with open('./Data/movie_titles.json', 'r+', encoding='utf-8') as f:
+with open(titles_path, 'r', encoding='utf-8') as f:
     movie_titles = json.load(f)
-hdr = {'User-Agent': 'Mozilla/5.0'}
+
 
 
 def movie_poster_fetcher(imdb_link):
@@ -171,3 +176,4 @@ def run():
 
 
 run()
+
