@@ -35,16 +35,15 @@ Click here to try the app: https://movie-recommender-app-frkdrjwskbqeyt4ptfrefg.
 
 ![App Screenshot](Screenshot2.png)
 
-
-![App Screenshot](Screenshot3.png)<!-- Replace with your screenshot filename -->
-
+---
 
 ## Installation
 
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/movie-recommender-webapp.git
-   cd movie-recommender-webapp
+   git clone https://github.com/SwarnangkurDey/Movie-recommender-app.git
+   cd Movie-recommender-app
+
 
 
