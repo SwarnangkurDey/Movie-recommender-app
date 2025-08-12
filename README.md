@@ -39,13 +39,16 @@ Click here to try the app: https://movie-recommender-app-frkdrjwskbqeyt4ptfrefg.
 
 ## Dataset
 
-The app uses two main JSON files as datasets:
+The app uses the following datasets:
 
 - **`movie_data.json`**:  
-  Contains the feature vectors for movies, including genre indicators and IMDb ratings used for the KNN recommendation algorithm.
+  Contains the feature vectors for movies, including genre indicators and IMDb ratings used by the KNN recommendation algorithm.
 
 - **`movie_titles.json`**:  
-  Contains movie metadata like titles and other descriptive attributes that help display results.
+  Contains movie metadata such as titles and other descriptive attributes to help display results.
+
+- **`movie_metadata.csv`**:  
+  A CSV file containing additional movie details like release dates, genres, ratings, and other metadata which may be used for enrichment or future extensions.
 
 > These datasets are essential for the recommendation engine and should be present in the project directory.
 
@@ -70,6 +73,7 @@ The app uses two main JSON files as datasets:
    ```bash
    git clone https://github.com/SwarnangkurDey/Movie-recommender-app.git
    cd Movie-recommender-app
+
 
 
 
