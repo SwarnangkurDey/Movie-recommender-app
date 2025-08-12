@@ -75,7 +75,7 @@ st.set_page_config(
 def run():
     img1 = Image.open('./logo.jpg')
     img1 = img1.resize((250, 250), )
-    st.image(img1, use_column_width=False)
+    st.image(img1, use_container_width=False)
     st.title("Movie Recommender System")
     st.markdown('''<h4 style='text-align: left; color: #d73b5c;'>* Data is based "IMDB 5000 Movie Dataset"</h4>''',
                 unsafe_allow_html=True)
@@ -181,6 +181,7 @@ def run():
 
 
 run()
+
 
 
 
