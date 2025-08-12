@@ -6,7 +6,7 @@ import requests
 import io
 import PIL.Image
 
-TMDB_API_KEY = "8265bd1679663a7ea12ac168da84d2e8"  # Replace with your key
+TMDB_API_KEY = "f2028a027659142aa1e0011eafdc56f4"  # Replace with your key
 
 with open('./movie_data.json', 'r', encoding='utf-8') as f:
     data = json.load(f)
@@ -162,3 +162,4 @@ def run():
 
 if __name__ == "__main__":
     run()
+
