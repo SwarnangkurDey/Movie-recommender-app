@@ -30,6 +30,14 @@ Click here to try the app: https://movie-recommender-app-frkdrjwskbqeyt4ptfrefg.
 
 ## Screenshots
 
+![App Screenshot](Screenshot1.png)
+
+
+![App Screenshot](Screenshot2.png)
+
+
+![App Screenshot](Screenshot3.png)<!-- Replace with your screenshot filename -->
+
 
 ## Installation
 
@@ -38,4 +46,5 @@ Click here to try the app: https://movie-recommender-app-frkdrjwskbqeyt4ptfrefg.
    ```bash
    git clone https://github.com/yourusername/movie-recommender-webapp.git
    cd movie-recommender-webapp
+
 
