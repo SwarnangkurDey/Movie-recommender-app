@@ -24,7 +24,7 @@ def movie_poster_fetcher(imdb_link):
         raw_data = u.read()
         image = PIL.Image.open(io.BytesIO(raw_data))
         image = image.resize((158, 301))
-        st.image(image, use_column_width=False)
+        st.image(image, use_container_width=False)
     else:
         st.warning("Poster not found for this movie.")
 
@@ -181,6 +181,7 @@ def run():
 
 
 run()
+
 
 
 
