@@ -25,10 +25,11 @@ A Streamlit-based Movie Recommendation system that suggests movies based on eith
 
 ## Demo
 
-![Demo GIF or Screenshot placeholder]  
-*Add your demo GIF or screenshots here.*
-
+Click here to try the app: https://movie-recommender-app-frkdrjwskbqeyt4ptfrefg.streamlit.app/
 ---
+
+## Screenshots
+
 
 ## Installation
 
@@ -37,3 +38,4 @@ A Streamlit-based Movie Recommendation system that suggests movies based on eith
    ```bash
    git clone https://github.com/yourusername/movie-recommender-webapp.git
    cd movie-recommender-webapp
+
