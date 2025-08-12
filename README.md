@@ -37,6 +37,32 @@ Click here to try the app: https://movie-recommender-app-frkdrjwskbqeyt4ptfrefg.
 
 ---
 
+## Dataset
+
+The app uses two main JSON files as datasets:
+
+- **`movie_data.json`**:  
+  Contains the feature vectors for movies, including genre indicators and IMDb ratings used for the KNN recommendation algorithm.
+
+- **`movie_titles.json`**:  
+  Contains movie metadata like titles and other descriptive attributes that help display results.
+
+> These datasets are essential for the recommendation engine and should be present in the project directory.
+
+---
+
+## Tech Stack
+
+- **Python** — Core programming language.
+- **Streamlit** — For building the interactive web UI.
+- **Pillow (PIL)** — Image processing and poster display.
+- **Requests** — To handle API calls to TMDb.
+- **KNearestNeighbours** — Custom KNN classifier implemented in `Classifier.py`.
+- **TMDb API** — To fetch movie details and posters dynamically.
+
+---
+
+
 ## Installation
 
 1. **Clone the repository:**
@@ -44,6 +70,7 @@ Click here to try the app: https://movie-recommender-app-frkdrjwskbqeyt4ptfrefg.
    ```bash
    git clone https://github.com/SwarnangkurDey/Movie-recommender-app.git
    cd Movie-recommender-app
+
 
 
 
