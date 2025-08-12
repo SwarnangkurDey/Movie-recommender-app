@@ -33,21 +33,28 @@ def movie_poster_fetcher(imdb_link):
 def get_movie_info(imdb_link):
     url_data = requests.get(imdb_link, headers=hdr).text
     s_data = BeautifulSoup(url_data, 'html.parser')
-    imdb_content = s_data.find("logo.jpg", property="og:description")
-    if not imdb_content:
-        return "Director: N/A", "Cast: N/A", "Story: N/A", "Rating: N/A"
 
-    movie_descr = imdb_content.attrs['content']
-    parts = [p.strip() for p in movie_descr.split('.') if p.strip()]
+    # Try to get description meta tag
+    imdb_content = s_data.find("meta", property="og:description")
+    if imdb_content and imdb_content.has_attr('content'):
+        movie_descr = imdb_content['content']
+        parts = [p.strip() for p in movie_descr.split('.') if p.strip()]
+    else:
+        parts = []
 
     movie_director = f"Director: {parts[0]}" if len(parts) > 0 else "Director: N/A"
     movie_cast = f"Cast: {parts[1].replace('With', '').strip()}" if len(parts) > 1 else "Cast: N/A"
     movie_story = f"Story: {parts[2]}." if len(parts) > 2 else "Story: N/A"
 
-    rating_tag = s_data.find("span", class_="sc-bde20123-1 iZlgcd")
-    movie_rating = f"Total Rating count: {rating_tag.text}" if rating_tag else "Rating: N/A"
+    # Updated rating selector - IMDb uses aria-label on star rating now
+    rating_tag = s_data.find("span", attrs={"data-testid": "hero-rating-bar__aggregate-rating__score"})
+    if rating_tag:
+        movie_rating = f"IMDb Rating: {rating_tag.text.strip()}"
+    else:
+        movie_rating = "Rating: N/A"
 
     return movie_director, movie_cast, movie_story, movie_rating
+
 
 
 
@@ -181,6 +188,7 @@ def run():
 
 
 run()
+
 
 
 
