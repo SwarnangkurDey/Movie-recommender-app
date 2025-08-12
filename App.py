@@ -177,8 +177,9 @@ def run():
             st.markdown("<br>", unsafe_allow_html=True)
 
     st.markdown("---")
-    st.markdown("<center><small>Made with ❤️ by You</small></center>", unsafe_allow_html=True)
+    st.markdown("<center><small>Built By Swarnangkur Dey|ML Enthusiast</small></center>", unsafe_allow_html=True)
 
 
 if __name__ == "__main__":
     run()
+
