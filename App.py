@@ -7,9 +7,9 @@ import requests, io
 import PIL.Image
 from urllib.request import urlopen
 
-with open('./Data/movie_data.json', 'r+', encoding='utf-8') as f:
+with open('./movie_data.json', 'r+', encoding='utf-8') as f:
     data = json.load(f)
-with open('./Data/movie_titles.json', 'r+', encoding='utf-8') as f:
+with open('./movie_titles.json', 'r+', encoding='utf-8') as f:
     movie_titles = json.load(f)
 hdr = {'User-Agent': 'Mozilla/5.0'}
 
@@ -171,3 +171,4 @@ def run():
 
 
 run()
+
