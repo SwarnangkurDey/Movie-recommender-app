@@ -34,14 +34,21 @@ def get_movie_info(imdb_link):
     url_data = requests.get(imdb_link, headers=hdr).text
     s_data = BeautifulSoup(url_data, 'html.parser')
     imdb_content = s_data.find("meta", property="og:description")
+    if not imdb_content:
+        return "Director: N/A", "Cast: N/A", "Story: N/A", "Rating: N/A"
+
     movie_descr = imdb_content.attrs['content']
-    movie_descr = str(movie_descr).split('.')
-    movie_director = movie_descr[0]
-    movie_cast = str(movie_descr[1]).replace('With', 'Cast: ').strip()
-    movie_story = 'Story: ' + str(movie_descr[2]).strip() + '.'
-    rating = s_data.find("span", class_="sc-bde20123-1 iZlgcd").text
-    movie_rating = 'Total Rating count: ' + str(rating)
+    parts = [p.strip() for p in movie_descr.split('.') if p.strip()]
+
+    movie_director = f"Director: {parts[0]}" if len(parts) > 0 else "Director: N/A"
+    movie_cast = f"Cast: {parts[1].replace('With', '').strip()}" if len(parts) > 1 else "Cast: N/A"
+    movie_story = f"Story: {parts[2]}." if len(parts) > 2 else "Story: N/A"
+
+    rating_tag = s_data.find("span", class_="sc-bde20123-1 iZlgcd")
+    movie_rating = f"Total Rating count: {rating_tag.text}" if rating_tag else "Rating: N/A"
+
     return movie_director, movie_cast, movie_story, movie_rating
+
 
 
 def KNN_Movie_Recommender(test_point, k):
@@ -174,6 +181,7 @@ def run():
 
 
 run()
+
 
 
 
