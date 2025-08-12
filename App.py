@@ -63,7 +63,7 @@ st.set_page_config(
 
 
 def run():
-    img1 = Image.open('./meta/logo.jpg')
+    img1 = Image.open('./logo.jpg')
     img1 = img1.resize((250, 250), )
     st.image(img1, use_column_width=False)
     st.title("Movie Recommender System")
@@ -171,4 +171,5 @@ def run():
 
 
 run()
+
 
