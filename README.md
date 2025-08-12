@@ -1,4 +1,4 @@
-# 🍿 Movie Recommender WebApp
+## 🍿 Movie Recommender WebApp
 
 A Streamlit-based Movie Recommendation system that suggests movies based on either a selected movie or user-selected genres, leveraging a K-Nearest Neighbours algorithm and fetching rich movie metadata and posters from The Movie Database (TMDb) API.
 
@@ -73,6 +73,7 @@ The app uses the following datasets:
    ```bash
    git clone https://github.com/SwarnangkurDey/Movie-recommender-app.git
    cd Movie-recommender-app
+
 
 
 
