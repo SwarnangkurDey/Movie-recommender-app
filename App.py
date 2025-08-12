@@ -85,7 +85,7 @@ def run():
         st.image(img1, use_container_width=True)
     with col2:
         st.markdown("<h1 style='color:#d73b5c;'>Movie Recommender WebApp</h1>", unsafe_allow_html=True)
-        st.markdown("<h5>Data is based on the IMDB 5000 Movie Dataset</h5>", unsafe_allow_html=True)
+        
 
     st.markdown("<hr>", unsafe_allow_html=True)
 
@@ -182,4 +182,5 @@ def run():
 
 if __name__ == "__main__":
     run()
+
 
